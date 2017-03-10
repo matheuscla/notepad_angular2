@@ -5,4 +5,8 @@ export class NotepadService {
   getNotepads() {
     return notepads;
   }
+
+  addNote(note) {
+    notepads.push(note);
+  }
 }

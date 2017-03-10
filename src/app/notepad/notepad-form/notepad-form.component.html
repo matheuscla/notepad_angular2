@@ -1,0 +1,28 @@
+<div class="row z-depth-1 notepad-form">
+  <form [formGroup]="notepadForm" (ngSubmit)="onSubmit(notepadForm.value)" >
+    <div class="col s12">
+      <label>Title: </label>
+      <input type="text"
+             id="title"
+             formControlName="title">
+    </div>
+
+    <div class="col s12">
+      <label>Description: </label>
+      <textarea type="text"
+             id="body"
+             class="materialize-textarea"
+             formControlName="body">
+      </textarea>
+    </div>
+
+    <div class="col s12 right-align">
+      <button type="submit"
+              class="btn btn-waved waves-effect waves-light"
+              [disabled]="!notepadForm.valid">
+              New note
+      </button>
+    </div>
+
+  </form>
+</div>
