@@ -1,0 +1,13 @@
+<div class="row container-space">
+  <div class="col s4" *ngFor="let notepad of notepads ">
+    <div class="card-panel hoverable notepad-component">
+      <h5 class="center-align">{{notepad.title}}</h5>
+      <blockquote>
+        {{notepad.body}}
+        <p>
+          <strong>Views: {{notepad.views}}</strong>
+        </p>
+      </blockquote>
+    </div>
+  </div>
+</div>
