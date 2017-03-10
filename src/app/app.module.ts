@@ -4,17 +4,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { NotepadComponent } from './notepad/notepad.component';
+import { NotepadModule } from './notepad/notepad.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    NotepadComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    NotepadModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
