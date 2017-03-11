@@ -19,7 +19,8 @@ export class NotepadFormComponent implements OnInit {
     this.notepadForm = formBuilder.group({
       'title': [''],
       'body': [''],
-      'views': ['0']
+      'views': ['0'],
+      'first_view': [new Date()]
     });
   }
 
@@ -28,6 +29,7 @@ export class NotepadFormComponent implements OnInit {
 
   onSubmit(form) {
     this.notepadForm.reset();
+    console.log(form);
     this.notepadService.addNote(form);
   }
 

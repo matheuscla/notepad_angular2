@@ -1,4 +1,6 @@
 .notepad-form {
   margin: 2em 0;
-  padding: 1em 0;
+  padding: 2em 0;
+  position: fixed;
+  width: 30%;
 }

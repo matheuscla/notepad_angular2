@@ -13,8 +13,8 @@ export class NotepadListComponent implements OnInit {
   constructor(private notepadService: NotepadService) { }
 
   ngOnInit() {
-    this.notepads = this.notepadService.getNotepads();
-    console.log(this.notepads);
+    this.notepadService.getNotepads()
+      .then((notepads) => this.notepads = notepads);
   }
 
 }
