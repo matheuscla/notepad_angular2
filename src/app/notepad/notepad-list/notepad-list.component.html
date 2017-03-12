@@ -10,13 +10,22 @@
       <h5 class="center-align"><strong>{{notepad.title}}</strong></h5>
       <blockquote class="truncate">
           {{notepad.body}}
-        <p>
-            <strong> Views: {{notepad.views}} </strong>
+        <p *ngIf="notepad.first_view">
+            <strong>First Visit: {{notepad.first_view | date}}</strong>
         </p>
-        <p>
-          <strong>First Visit: {{notepad.first_view}}</strong>
+        <p *ngIf="!notepad.first_view">
+          <strong>Never Visited</strong>
         </p>
       </blockquote>
+      <div class="collection">
+        <a class="collection-item"><span class="badge">{{notepad.views}}</span>View</a>
+        <a class="collection-item" *ngIf="notepad.first_view">
+          <span class="badge">{{notepad.first_view | date}}</span>First View
+        </a>
+        <a class="collection-item" *ngIf="!notepad.first_view">
+          Never Visited
+        </a>
+      </div>
     </div>
   </div>
 </div>

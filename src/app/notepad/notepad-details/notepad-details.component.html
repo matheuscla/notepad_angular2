@@ -3,8 +3,17 @@
     <h2 class="center-align notepad-title">{{ notepad?.title }}</h2>
     <blockquote>
         {{notepad?.body}}
-    <p class="">Views: {{ notepad?.views }} | {{ notepad?.first_view }}</p>
     </blockquote>
+
+    <div class="collection">
+      <a  class="collection-item"><span class="badge">{{notepad?.views}}</span>Views</a>
+      <a  class="collection-item" *ngIf="notepad?.first_view">
+        <span class="badge">{{notepad?.first_view | date}}</span>First View
+      </a>
+      <a href="#!" class="collection-item" *ngIf="!notepad?.first_view">
+        Never Visited
+      </a>
+    </div>
 
     <a class="btn" routerLink="/">Back</a>
   </div>
