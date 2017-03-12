@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NotepadDetailsComponent } from './notepad-details.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { NotepadService } from '../services/notepad.service';
 
 describe('NotepadDetailsComponent', () => {
   let component: NotepadDetailsComponent;
@@ -8,7 +10,13 @@ describe('NotepadDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NotepadDetailsComponent ]
+      declarations: [ NotepadDetailsComponent ],
+      imports: [
+        RouterTestingModule
+      ],
+      providers: [
+        NotepadService
+      ]
     })
     .compileComponents();
   }));

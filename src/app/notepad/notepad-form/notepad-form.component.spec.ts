@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NotepadFormComponent } from './notepad-form.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { NotepadService } from '../services/notepad.service';
 
 describe('NotepadFormComponent', () => {
   let component: NotepadFormComponent;
@@ -8,7 +10,14 @@ describe('NotepadFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NotepadFormComponent ]
+      declarations: [ NotepadFormComponent ],
+      imports: [
+        ReactiveFormsModule,
+        FormsModule
+      ],
+      providers: [
+        NotepadService
+      ]
     })
     .compileComponents();
   }));
