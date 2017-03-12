@@ -5,6 +5,12 @@
   font-weight: bold;
 }
 
+@media (max-width: 650px) {
+  .nav-logo {
+    margin-left: 0;
+  }
+}
+
 .nav-notepad {
   background-color: #663399;
 }

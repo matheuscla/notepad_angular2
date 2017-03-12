@@ -5,3 +5,11 @@
 .notepad-component {
   cursor: pointer;
 }
+
+.icons {
+  display: flex;
+}
+
+.search-bar {
+  margin-top: 1.5em;
+}

@@ -4,3 +4,12 @@
   position: fixed;
   width: 30%;
 }
+
+@media (max-width: 650px) {
+  .notepad-form {
+    margin: 2em 0;
+    padding: 2em 0;
+    position: static;
+    width: 100%;
+  }
+}

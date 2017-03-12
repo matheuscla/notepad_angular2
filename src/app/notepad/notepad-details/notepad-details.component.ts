@@ -21,10 +21,12 @@ export class NotepadDetailsComponent implements OnInit {
   ngOnInit() {
     console.log('Init');
     this.router.params.forEach((params: Params) => {
-      new Notepad(0, '', '', 0, '');
+      new Notepad(0,'', '', '', 0, '');
       const id = +params['id'];
       this.notepadService.getNotepad(id).
-        then((notepad) => { this.notepad = notepad; });
+        then((notepad) => { this.notepad = notepad;
+        this.notepad.views += 1;
+       });
     });
   }
 

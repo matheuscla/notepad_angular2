@@ -15,12 +15,19 @@ import { NotepadService } from '../services/notepad.service';
 })
 export class NotepadFormComponent implements OnInit {
   notepadForm: FormGroup;
+  status = [
+    'active',
+    'inactive',
+    'draft'
+  ];
   constructor(private formBuilder: FormBuilder, private notepadService: NotepadService) {
     this.notepadForm = formBuilder.group({
+      'id': [Math.random()],
+      'status': [''],
       'title': [''],
       'body': [''],
-      'views': ['0'],
-      'first_view': [new Date()]
+      'views': [0],
+      'first_view': []
     });
   }
 
@@ -28,8 +35,8 @@ export class NotepadFormComponent implements OnInit {
   }
 
   onSubmit(form) {
-    this.notepadForm.reset();
     console.log(form);
+    this.notepadForm.reset();
     this.notepadService.addNote(form);
   }
 
