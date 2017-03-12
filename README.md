@@ -1,4 +1,8 @@
 # Notepad
+  Notepad is an application built in Angular 2.
+  
+# Live Link
+**https://notepads-app.herokuapp.com/notepad**
 
 # Instructions
  - To run locally, clone the repo.
